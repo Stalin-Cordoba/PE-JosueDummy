@@ -1,7 +1,7 @@
 # La función 'time' la pongo para ver que tanto me tardé en esperar la respuesta
 from time import time
 
-def test():
+def main():
     
     inicio = time()
     
@@ -25,4 +25,4 @@ def test():
     print(sum(listaNumeros) + 2) # Cómo en la lista sólo están los impares, debemos sumar el 2 (porque es primo también)
     print(fin - inicio)
 
-test()
+main()
