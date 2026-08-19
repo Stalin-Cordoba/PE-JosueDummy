@@ -1,14 +1,3 @@
-def factorComun(n1, n2):
-
-    for d in range(2, n2, 1):
-
-        if n1 % d == 0 and n2 % d == 0:
-
-            print(d)
-            return True
-
-    return False
-
 def quitarDigitos(num, den):
 
     valores = []
