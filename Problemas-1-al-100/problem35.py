@@ -48,12 +48,15 @@ def rotarNumero(numero):
     
     while divisor > 0:
 
+        # El dígito se obtiene diviendo el número entre una potencia de 10
         d = n // divisor
 
         digitos.append(d)
 
+        # Se resta el número con el producto del dígito obtenido y la potencia de 10
         n = n - (d * divisor)
 
+        # La potencia de 10 se va reduciendo hasta que llega a 0
         divisor = divisor // 10
 
     rotaciones = [digitos]
@@ -62,6 +65,7 @@ def rotarNumero(numero):
 
         lista = rotaciones[r].copy()
 
+        # Para cada rotación, el dígito que está más a la derecha, pasa al inicio
         lista.insert(0, lista[-1])
         lista.pop()
 
@@ -74,6 +78,7 @@ def rotarNumero(numero):
 
     cant_digitos = len(rotaciones)
 
+    # Mediante las rotaciones obtenidas, se construyen los números
     for r in rotaciones:
 
         acumulador = 10 ** (cant_digitos - 1)
@@ -93,6 +98,7 @@ def main():
 
     primos = generarPrimos() # Primero, generamos los primos menores que un millón
 
+    # Como los primos circulares tiene que ser primos, entonces se calcula la cantidad de números primos menores que un millón
     respuesta = len(primos)
 
     for p in primos:
@@ -101,9 +107,12 @@ def main():
 
         for rotacion in test:
 
+            # Se verifica si todas las permutaciones/rotaciones del número, son primos también
             try:
 
                 primos.index(rotacion)
+            # Si hay una que no es un número primo, se pasa al siguiente nombre
+            # Y se procede a restar 1, a la cantidad de números primos menores que un millón
             except ValueError:
 
                 respuesta -= 1
