@@ -11,8 +11,6 @@ def main():
     for fila in triangulo_texto.split('\n'):
 
         triangulo.append(fila.split(' '))
-    
-    triangulo.pop() # Por algún motivo, se genera una lista vacía al final xdxd
 
     for f in range(0, len(triangulo), 1):
 
