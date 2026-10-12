@@ -12,7 +12,6 @@ def main():
     
     combinaciones = []
     
-    digitos = [0,1,2,3,4,5,6,7,8,9] # Un arreglo para los dígitos
     primos = [2,3,5,7,11,13,17]
 
     # Se calcula cada combinación
