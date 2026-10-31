@@ -26,7 +26,8 @@ def main():
         digitos_num = len(str(fraccion[0]))
         digitos_den = len(str(fraccion[1]))
         
-        # Si la cantidad de dígitos
+        # Si la cantidad de dígitos en el numerador, es mayor que la cantidad de dígitos que en el denominador, entonces
+        # esa fracción nos sirve para nuestra respuesta
         if digitos_num > digitos_den:
 
             respuesta += 1
